@@ -5,16 +5,32 @@ import java.sql.*;
 abstract public class calcomm extends saler implements connectDB {
     public void calcom(){
         String sql="select s.orderNO,s.ProID,p.price,s.ID from sale as s left join product as p on s.ProID=p.ProID where s.ID='"+super.getID()+"';";
+        String sql2="select count(ID) from sale where ID='"+super.getID()+"';";
         float sale=(float) 0.00;
+        float com=(float)0.00;
+        int count=0;
+        try{//count data row
+            Connection con =getconnection();
+            Statement stm=con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet rs = stm.executeQuery(sql2);
+            rs.first();
+            count=rs.getInt(1);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
         try{
             Connection con = getconnection();
             Statement stm=con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             ResultSet rs=stm.executeQuery(sql);
             rs.first();
-            do{
+            for(int i=0;i<count;i++){
                 sale=sale+rs.getFloat(3);
                 rs.next();
-            }while(rs.last());
+            }
+            com=(float) (sale*0.03);
+            super.setComm(com);
+            super.setTsal((super.getSal()+super.getComm()));
         }
         catch(Exception e){
             e.printStackTrace();

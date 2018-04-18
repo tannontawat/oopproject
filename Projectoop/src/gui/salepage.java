@@ -21,6 +21,7 @@ public class salepage extends javax.swing.JFrame {
     private void initComponents() {
 
         badd = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         table = new javax.swing.JTable();
         txt1 = new javax.swing.JTextField();
@@ -43,6 +44,15 @@ public class salepage extends javax.swing.JFrame {
         });
         getContentPane().add(badd);
         badd.setBounds(710, 50, 151, 73);
+
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(410, 660, 73, 23);
 
         table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -182,6 +192,12 @@ public class salepage extends javax.swing.JFrame {
        lname2.setText(login.getlanme());  
     }//GEN-LAST:event_lname2AncestorAdded
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        menu menu = new menu();
+        this.setVisible(false);
+        menu.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -222,6 +238,7 @@ public class salepage extends javax.swing.JFrame {
     private javax.swing.JButton badd;
     private javax.swing.JButton bcancel;
     private javax.swing.JButton bsale;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

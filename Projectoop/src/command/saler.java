@@ -1,8 +1,13 @@
 package command;
-
-abstract public class saler   {
+import java.sql.*;
+abstract public class saler implements connectDB   {
     private static String ID,Name,lname,Password;
-    private static float sal,comm,tsal;
+    private static float sal;
+    private static float comm,tsal;
+    
+    public Connection getConnection(){
+        
+    }
     
     public saler(){
         

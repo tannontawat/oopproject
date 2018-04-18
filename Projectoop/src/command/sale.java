@@ -42,8 +42,8 @@ public class sale extends product {
     public void record(String sql){ 
         try {
             Connection con = super.getconnection();
-            Statement stm=con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            rs=stm.executeQuery(sql);
+            Statement stm=con.createStatement();
+            stm.executeUpdate(sql);
         } catch (SQLException ex) {
             Logger.getLogger(sale.class.getName()).log(Level.SEVERE, null, ex);
         }
