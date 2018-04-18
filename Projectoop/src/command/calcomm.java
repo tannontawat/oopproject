@@ -1,23 +1,23 @@
-
 package command;
 
 import java.sql.*;
 
-abstract public class calcomm  {
-   login login = new login();
-    public float cal(){
-        float com=(float) 0.0;
+abstract public class calcomm extends saler implements connectDB {
+    public void calcom(){
+        String sql;
+        float sale;
         try{
-           String sql="select s.ProID,p.price,s.ID from sale as s,product as p where ID='"+login.ID+"';";
-           Connection con =getconnection(); 
+            Connection con = getconnection();
+            Statement stm=con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet rs=stm.executeQuery(sql);
+            rs.first();
         }
         catch(Exception e){
             e.printStackTrace();
         }
-        return com;
     }
-    public Connection getconnection(){
-         String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+    public Connection getconnection() {
+        String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
         Connection con = null;
         try {
             Class.forName(driver);
@@ -29,5 +29,4 @@ abstract public class calcomm  {
         }
         return con;
     }
-    
 }
