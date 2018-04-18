@@ -157,7 +157,7 @@ public class salepage extends javax.swing.JFrame {
     private void bsaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bsaleActionPerformed
         String sql;
         for(int i=0;i<table.getRowCount();i++){
-            sql="insert into sale(orderNo,ProID,ID) values("+orderno+","+model.getValueAt(i,0)+",'"+login.getID()+"')";
+            sql="insert into sale(orderNo,ProID,ID) values('"+orderno+"','"+model.getValueAt(i,0)+"','"+login.getID()+"')";
             sale.record(sql);
         }
         orderno++;
