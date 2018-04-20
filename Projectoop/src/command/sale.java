@@ -1,26 +1,35 @@
 package command;
 
 import java.sql.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 public class sale extends product implements search {
+
     public String proi;
     public ResultSet rs;
-    
-    public sale(){
-       
+    private Connection con;
+
+    public sale() {
+        String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+        Connection con = null;
+        try {
+            Class.forName(driver);
+            String url = "jdbc:sqlserver://sirtanoop.database.windows.net:1433;database=oop;user=admin1@sirtanoop;password=password1*;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
+            con = DriverManager.getConnection(url);
+            System.out.println("Database connected.");
+            this.con = con;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
-    
-    public sale(String proid){
+
+    public sale(String proid) {
+        this(); //this()
         super.setProId(proid);
     }
 
     public void search() {
         try {
-            Connection con =super.getconnection();
-            String sql = "select * from product where ProID='" +this.proi+ "'";
-            Statement stm = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            String sql = "select * from product where ProID='" + super.getProId() + "'";
+            Statement stm = this.con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             rs = stm.executeQuery(sql);
             rs.first();
             do {
@@ -38,14 +47,13 @@ public class sale extends product implements search {
             e.printStackTrace();
         }
     }
-    
-    public void record(String sql){ 
+
+    public void record(String sql) {
         try {
-            Connection con = super.getconnection();
-            Statement stm=con.createStatement();
+            Statement stm = this.con.createStatement();
             stm.executeUpdate(sql);
         } catch (SQLException ex) {
-            Logger.getLogger(sale.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         }
     }
 

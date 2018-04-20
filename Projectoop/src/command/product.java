@@ -1,6 +1,5 @@
 package command;
 
-import java.sql.*;
 
 public class product {
     private String ProID,Name,type; 
@@ -37,19 +36,4 @@ public class product {
     public float getPrice(){
         return this.price;
     }
-    
-    public Connection getconnection() {
-        String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        Connection con = null;
-        try {
-            Class.forName(driver);
-            String url = "jdbc:sqlserver://sirtanoop.database.windows.net:1433;database=oop;user=admin1@sirtanoop;password=password1*;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
-            con = DriverManager.getConnection(url);
-            System.out.println("Database connected.");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return con;
-    }
-
 }

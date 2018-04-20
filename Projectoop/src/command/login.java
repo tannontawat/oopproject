@@ -7,14 +7,14 @@ public class login extends saler implements checkLOgin {
 
     String id, password;
     private boolean check = false;
-    Connection con;
+    Connection con=null;
 
     public login() {
         
     }
 
     public login(String id, String password) {
-        super();
+        super();//super()
         this.id = id;
         this.password = password;
         check();
