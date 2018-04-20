@@ -3,7 +3,7 @@ package command;
 import java.sql.*;
 import gui.*;
 
-public class login extends saler implements CheckLogin {
+public class login extends saler implements checkLOgin {
 
     String id, password;
     private boolean check = false;

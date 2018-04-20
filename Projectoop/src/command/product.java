@@ -2,7 +2,7 @@ package command;
 
 import java.sql.*;
 
-public class product implements connectDB {
+public class product {
     private String ProID,Name,type; 
     private float  price;
 

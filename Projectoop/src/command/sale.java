@@ -4,12 +4,12 @@ import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class sale extends product {
+public class sale extends product implements search {
     public String proi;
     public ResultSet rs;
     
     public sale(){
-        
+       
     }
     
     public sale(String proid){
@@ -18,7 +18,7 @@ public class sale extends product {
 
     public void search() {
         try {
-            Connection con = super.getconnection();
+            Connection con =super.getconnection();
             String sql = "select * from product where ProID='" +this.proi+ "'";
             Statement stm = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             rs = stm.executeQuery(sql);
