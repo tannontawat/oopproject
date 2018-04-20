@@ -139,25 +139,25 @@ public class price extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lnameAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_lnameAncestorAdded
-        lname.setText(login.getName());
+        lname.setText(saler.getName());
     }//GEN-LAST:event_lnameAncestorAdded
 
     private void llnameAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_llnameAncestorAdded
-        llname.setText(login.getlanme());
+        llname.setText(saler.getlanme());
     }//GEN-LAST:event_llnameAncestorAdded
 
     private void txtpayrollAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_txtpayrollAncestorAdded
-        String sal = Float.toString(login.getSal());
+        String sal = Float.toString(saler.getSal());
         txtpayroll.setText(sal);
     }//GEN-LAST:event_txtpayrollAncestorAdded
 
     private void txtcomAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_txtcomAncestorAdded
-        String com = Float.toString(login.getComm());
+        String com = Float.toString(saler.getComm());
         txtcom.setText(com);
     }//GEN-LAST:event_txtcomAncestorAdded
 
     private void txttsalAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_txttsalAncestorAdded
-        String tsal = Float.toString(login.getTsal());
+        String tsal = Float.toString(saler.getTsal());
         txttsal.setText(tsal);
     }//GEN-LAST:event_txttsalAncestorAdded
 

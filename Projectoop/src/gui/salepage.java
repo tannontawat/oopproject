@@ -151,7 +151,6 @@ public class salepage extends javax.swing.JFrame {
 
     private void baddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_baddActionPerformed
         sale=new sale(txt1.getText());
-        //sale.sale();
         sale.search();
         model.addRow(new Object[0]);
         try{

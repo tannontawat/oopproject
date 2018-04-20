@@ -13,7 +13,7 @@ public class sale extends product implements search {
     }
     
     public sale(String proid){
-        this.proi=proid;
+        super.setProId(proid);
     }
 
     public void search() {

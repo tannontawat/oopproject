@@ -23,8 +23,8 @@ public class login extends saler implements checkLOgin {
     public void check() {
         String sql = "select* from saler";
         try {
-            con = super.con;
-            Statement stm = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            this.con = super.con;
+            Statement stm = this.con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             ResultSet rs = stm.executeQuery(sql);
             rs.first();
             checklogin(rs);
@@ -54,7 +54,8 @@ public class login extends saler implements checkLOgin {
                 super.setTsal(rs.getFloat(7));
                 c = true;
                 setopen(c);
-                con.close();
+                super.con.close();
+                this.con=null;
             } else {
                 System.out.println("Incorrect");
             }
