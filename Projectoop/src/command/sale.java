@@ -55,6 +55,8 @@ public class sale extends product implements search {
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
+        test t = new test();
+        t.cal(); // to commision
     }
 
 }

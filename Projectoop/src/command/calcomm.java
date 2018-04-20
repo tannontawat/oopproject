@@ -44,6 +44,7 @@ abstract public class calcomm extends saler {
             e.printStackTrace();
         }
     }
+    
     private Connection getconnection(){
         String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
         Connection con = null;

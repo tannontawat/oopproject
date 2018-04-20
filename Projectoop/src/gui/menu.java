@@ -94,8 +94,6 @@ public class menu extends javax.swing.JFrame {
         price price = new price();
         this.setVisible(false);
         price.setVisible(true);
-        test test=new test();
-        test.cal();
         System.out.println("sal="+saler.getSal());
         System.out.println("com="+saler.getComm());
         System.out.println("tsal="+saler.getTsal());
