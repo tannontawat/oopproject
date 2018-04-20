@@ -78,6 +78,12 @@ public class salepage extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(70, 150, 790, 440);
+
+        txt1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(txt1);
         txt1.setBounds(260, 50, 390, 70);
 
@@ -145,6 +151,7 @@ public class salepage extends javax.swing.JFrame {
 
     private void baddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_baddActionPerformed
         sale=new sale(txt1.getText());
+        //sale.sale();
         sale.search();
         model.addRow(new Object[0]);
         try{
@@ -197,6 +204,10 @@ public class salepage extends javax.swing.JFrame {
         this.setVisible(false);
         menu.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void txt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt1ActionPerformed
 
     /**
      * @param args the command line arguments

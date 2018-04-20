@@ -1,16 +1,23 @@
 package command;
 import java.sql.*;
-abstract public class saler implements connectDB   {
+abstract public class saler   {
     private static String ID,Name,lname,Password;
     private static float sal;
     private static float comm,tsal;
-    
-    public Connection getConnection(){
-        
-    }
+    public Connection con=null;
     
     public saler(){
-        
+        String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+        Connection con = null;
+        try {
+            Class.forName(driver);
+            String url = "jdbc:sqlserver://sirtanoop.database.windows.net:1433;database=oop;user=admin1@sirtanoop;password=password1*;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
+            con = DriverManager.getConnection(url);
+            System.out.println("Database connected.");
+            this.con=con;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     
     public void setID(String ID){

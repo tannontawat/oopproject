@@ -7,7 +7,7 @@ public class product implements connectDB {
     private float  price;
 
     public product() {
-
+        
     }
     
     public void setProId(String proid){

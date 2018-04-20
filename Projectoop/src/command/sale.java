@@ -8,8 +8,8 @@ public class sale extends product {
     public String proi;
     public ResultSet rs;
     
-    public sale() {
-
+    public sale(){
+        
     }
     
     public sale(String proid){

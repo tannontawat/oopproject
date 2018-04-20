@@ -3,17 +3,18 @@ package command;
 import java.sql.*;
 import gui.*;
 
-public class login extends saler implements CheckLogin, connectDB {
+public class login extends saler implements CheckLogin {
 
     String id, password;
     private boolean check = false;
     Connection con;
 
     public login() {
-
+        
     }
 
     public login(String id, String password) {
+        super();
         this.id = id;
         this.password = password;
         check();
@@ -22,7 +23,7 @@ public class login extends saler implements CheckLogin, connectDB {
     public void check() {
         String sql = "select* from saler";
         try {
-            con = getconnection();
+            con = super.con;
             Statement stm = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             ResultSet rs = stm.executeQuery(sql);
             rs.first();
@@ -60,20 +61,6 @@ public class login extends saler implements CheckLogin, connectDB {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    public Connection getconnection() {
-        String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        Connection con = null;
-        try {
-            Class.forName(driver);
-            String url = "jdbc:sqlserver://sirtanoop.database.windows.net:1433;database=oop;user=admin1@sirtanoop;password=password1*;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
-            con = DriverManager.getConnection(url);
-            System.out.println("Database connected.");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return con;
     }
 
     private void setopen(boolean c) {
