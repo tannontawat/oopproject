@@ -36,7 +36,9 @@ abstract public class calcomm extends saler {
                 rs.next();
             }
             com = (float) (sale * 0.03);
+            
             super.setComm(com);
+            
             super.setTsal((super.getSal() + super.getComm()));
         } catch (Exception e) {
             e.printStackTrace();
