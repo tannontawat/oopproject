@@ -5,7 +5,7 @@ public class sale extends product implements search {
 
     public String proi;
     public ResultSet rs;
-    private Connection con;
+    public Connection con;
 
     public sale() {
         String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
@@ -56,7 +56,7 @@ public class sale extends product implements search {
             ex.printStackTrace();
         }
         test t = new test();
-        t.cal(); // to commision
+        t.cal(); // to test for cal commission
     }
 
 }

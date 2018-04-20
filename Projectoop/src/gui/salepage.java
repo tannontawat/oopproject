@@ -199,6 +199,12 @@ public class salepage extends javax.swing.JFrame {
     }//GEN-LAST:event_lname2AncestorAdded
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        try{
+            sale.con.close();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
         menu menu = new menu();
         this.setVisible(false);
         menu.setVisible(true);

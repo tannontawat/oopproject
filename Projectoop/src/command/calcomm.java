@@ -36,11 +36,35 @@ abstract public class calcomm extends saler {
                 rs.next();
             }
             com = (float) (sale * 0.03);
-            
-            super.setComm(com);
-            
-            super.setTsal((super.getSal() + super.getComm()));
+            saveComm(com); //save comm to db
+            saveTsal(super.getTsal(),super.getComm()); //save tsal to db
+            con.close();
         } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    private void saveComm(float comm){
+        String sql="insert into saler(com) values("+comm+") where ID='"+super.getID()+"'";
+        try{
+            Statement stm = this.con.createStatement();
+            stm.executeUpdate(sql);
+            super.setComm(comm);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
+    private void saveTsal(float tsal,float comm){
+        float sum=tsal+comm;
+        String sql="insert into saler(tsal) values("+sum+") where ID='"+super.getID()+"'";
+        try{
+            Statement stm = this.con.createStatement();
+            stm.executeUpdate(sql);
+            super.setTsal(sum);
+        }
+        catch(Exception e){
             e.printStackTrace();
         }
     }
