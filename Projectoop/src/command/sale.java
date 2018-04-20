@@ -1,6 +1,7 @@
 package command;
 
 import java.sql.*;
+
 public class sale extends product implements search {
 
     public String proi;
@@ -57,7 +58,7 @@ public class sale extends product implements search {
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
-        
+
     }
 
 }
