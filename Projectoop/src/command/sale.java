@@ -52,11 +52,12 @@ public class sale extends product implements search {
         try {
             Statement stm = this.con.createStatement();
             stm.executeUpdate(sql);
+            test t = new test();
+            t.cal(); // to test for cal commission
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
-        test t = new test();
-        t.cal(); // to test for cal commission
+        
     }
 
 }

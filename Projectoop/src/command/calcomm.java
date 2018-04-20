@@ -45,7 +45,7 @@ abstract public class calcomm extends saler {
     }
     
     private void saveComm(float comm){
-        String sql="insert into saler(com) values("+comm+") where ID='"+super.getID()+"'";
+        String sql="update saler set com="+comm+" where ID='"+super.getID()+"'";
         try{
             Statement stm = this.con.createStatement();
             stm.executeUpdate(sql);
@@ -58,7 +58,7 @@ abstract public class calcomm extends saler {
     
     private void saveTsal(float tsal,float comm){
         float sum=tsal+comm;
-        String sql="insert into saler(tsal) values("+sum+") where ID='"+super.getID()+"'";
+        String sql="update saler set tsal="+sum+" where ID='"+super.getID()+"'";
         try{
             Statement stm = this.con.createStatement();
             stm.executeUpdate(sql);
