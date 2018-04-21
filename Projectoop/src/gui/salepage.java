@@ -168,7 +168,7 @@ public class salepage extends javax.swing.JFrame {
             model = new DefaultTableModel(col, 0);
             table.setModel(model);
             row=0;
-        }
+        } 
     }//GEN-LAST:event_baddActionPerformed
 
     private void tableAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_tableAncestorAdded
