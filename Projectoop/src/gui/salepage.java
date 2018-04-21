@@ -3,6 +3,7 @@ package gui;
 
 import command.*;
 import javax.swing.table.*;
+import javax.swing.JOptionPane;
 public class salepage extends javax.swing.JFrame {
     DefaultTableModel model;
     private int row =0;
@@ -52,7 +53,7 @@ public class salepage extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(410, 660, 73, 23);
+        jButton1.setBounds(360, 630, 220, 80);
 
         table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -124,7 +125,7 @@ public class salepage extends javax.swing.JFrame {
             }
         });
         getContentPane().add(bcancel);
-        bcancel.setBounds(70, 620, 250, 100);
+        bcancel.setBounds(30, 620, 250, 100);
 
         bsale.setIcon(new javax.swing.ImageIcon(getClass().getResource("/folder/sale1.png"))); // NOI18N
         bsale.addActionListener(new java.awt.event.ActionListener() {
@@ -133,7 +134,7 @@ public class salepage extends javax.swing.JFrame {
             }
         });
         getContentPane().add(bsale);
-        bsale.setBounds(620, 620, 250, 100);
+        bsale.setBounds(660, 620, 250, 100);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(153, 153, 153));
@@ -181,13 +182,17 @@ public class salepage extends javax.swing.JFrame {
         model = new DefaultTableModel(col, 0);
         table.setModel(model);
         row=0;
+        JOptionPane.showMessageDialog(null,"Sale Sucessful.");
     }//GEN-LAST:event_bsaleActionPerformed
 
     private void bcancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bcancelActionPerformed
-        String col[] = {"Pro ID", "Name", "Price", "Type"};
-        model = new DefaultTableModel(col, 0);
-        table.setModel(model);
-        row=0;
+        int n = JOptionPane.showConfirmDialog(null,"Are you cancel the transaction?","An Iname Question",JOptionPane.YES_NO_OPTION);System.out.print(n);
+        if(n==0){
+            String col[] = {"Pro ID", "Name", "Price", "Type"};
+            model = new DefaultTableModel(col, 0);
+            table.setModel(model);
+            row=0;
+        }
     }//GEN-LAST:event_bcancelActionPerformed
 
     private void name2AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_name2AncestorAdded

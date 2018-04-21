@@ -1,6 +1,7 @@
 package gui;
 
 import command.*;
+import javax.swing.JOptionPane;
 
 public class loginPage extends javax.swing.JFrame {
 
@@ -82,6 +83,7 @@ public class loginPage extends javax.swing.JFrame {
                 menu.setVisible(true);
                 a = false;
             } else {
+                JOptionPane.showMessageDialog(null,"Incorrect username or password.Please login again","Inane error",JOptionPane.ERROR_MESSAGE);
                 txtid.setText(null);
                 txtpw.setText(null);
             }
