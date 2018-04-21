@@ -31,7 +31,7 @@ abstract public class calcomm extends saler {
             Statement stm = this.con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             ResultSet rs = stm.executeQuery(sql);
             rs.first();
-            for (int i = 0; i < count; i++) {
+            for (int i = 1; i <= count; i++) {
                 sale = sale + rs.getFloat(3);
                 rs.next();
             }

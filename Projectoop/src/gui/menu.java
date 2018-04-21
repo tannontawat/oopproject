@@ -83,7 +83,7 @@ public class menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(40, 310, 240, 180);
+        jButton2.setBounds(40, 330, 240, 180);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/folder/55555.png"))); // NOI18N
         jLabel2.setText("jLabel2");
@@ -98,9 +98,6 @@ public class menu extends javax.swing.JFrame {
         price price = new price();
         this.setVisible(false);
         price.setVisible(true);
-        System.out.println("sal="+saler.getSal());
-        System.out.println("com="+saler.getComm());
-        System.out.println("tsal="+saler.getTsal());
     }//GEN-LAST:event_bpayrollActionPerformed
 
     private void name1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_name1AncestorAdded
@@ -112,7 +109,9 @@ public class menu extends javax.swing.JFrame {
     }//GEN-LAST:event_lname1AncestorAdded
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
+        loginPage log = new loginPage();
+        log.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
