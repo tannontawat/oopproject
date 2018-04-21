@@ -163,6 +163,7 @@ public class salepage extends javax.swing.JFrame {
             txt1.setText(null);
         }
         catch(Exception e){
+            JOptionPane.showMessageDialog(null,"Cannot fidn product. Please find again.","Inane error",JOptionPane.ERROR_MESSAGE);
             txt1.setText(null);
             String col[] = {"Pro ID", "Name", "Price", "Type"};
             model = new DefaultTableModel(col, 0);

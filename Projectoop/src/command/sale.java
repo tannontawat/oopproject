@@ -46,7 +46,7 @@ public class sale extends product implements search {
                 }
             } while (!this.proi.equals(rs.getString(1)));
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null,"Cannot fidn product. Please find again.","Inane error",JOptionPane.ERROR_MESSAGE);
+            
         }
     }
 
