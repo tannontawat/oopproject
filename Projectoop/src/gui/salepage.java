@@ -163,6 +163,7 @@ public class salepage extends javax.swing.JFrame {
             txt1.setText(null);
         }
         catch(Exception e){
+            txt1.setText(null);
             e.printStackTrace();
         }
     }//GEN-LAST:event_baddActionPerformed

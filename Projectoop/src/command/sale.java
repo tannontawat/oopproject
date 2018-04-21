@@ -1,6 +1,7 @@
 package command;
 
 import java.sql.*;
+import javax.swing.JOptionPane;
 
 public class sale extends product implements search {
 
@@ -45,7 +46,7 @@ public class sale extends product implements search {
                 }
             } while (!this.proi.equals(rs.getString(1)));
         } catch (Exception e) {
-            e.printStackTrace();
+            JOptionPane.showMessageDialog(null,"Cannot fidn product. Please find again.","Inane error",JOptionPane.ERROR_MESSAGE);
         }
     }
 
