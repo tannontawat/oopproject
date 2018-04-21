@@ -37,7 +37,7 @@ abstract public class calcomm extends saler {
             }
             com = (float) (sale * 0.03);
             saveComm(com); //save comm to db
-            saveTsal(super.getTsal(),super.getComm()); //save tsal to db
+            saveTsal(super.getSal(),super.getComm()); //save tsal to db
             con.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -56,8 +56,8 @@ abstract public class calcomm extends saler {
         }
     }
     
-    private void saveTsal(float tsal,float comm){
-        float sum=tsal+comm;
+    private void saveTsal(float sal,float comm){
+        float sum=sal+comm;
         String sql="update saler set tsal="+sum+" where ID='"+super.getID()+"'";
         try{
             Statement stm = this.con.createStatement();
