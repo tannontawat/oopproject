@@ -3,12 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/psu/year2/oop/git/oopproject_clone/Projectoop/src/gui/salepage.java</file>
-            <file>file:/D:/psu/year2/oop/git/oopproject_clone/Projectoop/src/command/connectDB.java</file>
-            <file>file:/D:/psu/year2/oop/git/oopproject_clone/Projectoop/src/command/calcomm.java</file>
-            <file>file:/D:/psu/year2/oop/git/oopproject_clone/Projectoop/src/command/saler.java</file>
-            <file>file:/D:/psu/year2/oop/git/oopproject_clone/Projectoop/src/gui/menu.java</file>
-            <file>file:/D:/psu/year2/oop/git/oopproject_clone/Projectoop/src/command/sale.java</file>
+            <file>file:/D:/TAN/oop/oopproject/Projectoop/src/gui/price.java</file>
+            <file>file:/D:/TAN/oop/oopproject/Projectoop/src/command/sale.java</file>
+            <file>file:/D:/TAN/oop/oopproject/Projectoop/src/gui/loginPage.java</file>
+            <file>file:/D:/TAN/oop/oopproject/Projectoop/src/gui/menu.java</file>
         </group>
     </open-files>
 </project-private>

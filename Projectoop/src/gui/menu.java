@@ -17,7 +17,8 @@ public class menu extends javax.swing.JFrame {
         lname1 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         bpayroll = new javax.swing.JButton();
-        bsale = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -66,29 +67,32 @@ public class menu extends javax.swing.JFrame {
         getContentPane().add(bpayroll);
         bpayroll.setBounds(560, 320, 250, 190);
 
-        bsale.setIcon(new javax.swing.ImageIcon(getClass().getResource("/folder/stock.png"))); // NOI18N
-        bsale.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/folder/logout_1.png"))); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bsaleActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(bsale);
-        bsale.setBounds(120, 320, 250, 190);
+        getContentPane().add(jButton1);
+        jButton1.setBounds(330, 540, 250, 100);
+
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/folder/stock.png"))); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2);
+        jButton2.setBounds(40, 310, 240, 180);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/folder/55555.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 280, 930, 300);
+        jLabel2.setBounds(0, 280, 930, 370);
 
-        setSize(new java.awt.Dimension(941, 624));
+        setSize(new java.awt.Dimension(941, 698));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void bsaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bsaleActionPerformed
-        salepage sale = new salepage();
-        this.setVisible(false);
-        sale.setVisible(true);
-    }//GEN-LAST:event_bsaleActionPerformed
 
     private void bpayrollActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bpayrollActionPerformed
         price price = new price();
@@ -106,6 +110,16 @@ public class menu extends javax.swing.JFrame {
     private void lname1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_lname1AncestorAdded
         lname1.setText(login.getlanme());
     }//GEN-LAST:event_lname1AncestorAdded
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        salepage sale = new salepage();
+        this.setVisible(false);
+        sale.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -144,7 +158,8 @@ public class menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bpayroll;
-    private javax.swing.JButton bsale;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
