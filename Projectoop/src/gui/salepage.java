@@ -46,14 +46,14 @@ public class salepage extends javax.swing.JFrame {
         getContentPane().add(badd);
         badd.setBounds(710, 50, 151, 73);
 
-        jButton1.setText("jButton1");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/folder/ปุ่ม1.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(360, 630, 220, 80);
+        jButton1.setBounds(390, 600, 160, 130);
 
         table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -144,7 +144,7 @@ public class salepage extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/folder/55555.png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 923, 735);
+        jLabel1.setBounds(0, 0, 923, 750);
 
         setSize(new java.awt.Dimension(943, 783));
         setLocationRelativeTo(null);

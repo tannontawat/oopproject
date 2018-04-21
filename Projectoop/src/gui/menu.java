@@ -74,7 +74,7 @@ public class menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(330, 540, 250, 100);
+        jButton1.setBounds(350, 540, 250, 100);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/folder/stock.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -83,14 +83,14 @@ public class menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(40, 330, 240, 180);
+        jButton2.setBounds(100, 330, 240, 180);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/folder/55555.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 280, 930, 370);
+        jLabel2.setBounds(0, 280, 930, 380);
 
-        setSize(new java.awt.Dimension(941, 698));
+        setSize(new java.awt.Dimension(937, 698));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -111,6 +111,8 @@ public class menu extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         this.setVisible(false);
         loginPage log = new loginPage();
+        login login = new login();
+        login.ClearData();
         log.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 

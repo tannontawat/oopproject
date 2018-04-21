@@ -71,5 +71,15 @@ public class login extends saler implements checkLOgin {
     public boolean getopen() {
         return this.check;
     }
+    
+    public void ClearData(){
+        super.setID(null);
+        super.setPassword(null);
+        super.setName(null);
+        super.setLname(null);
+        super.setSal(0);
+        super.setComm(0);
+        super.setTsal(0);
+    }
 
 }
