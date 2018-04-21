@@ -164,6 +164,10 @@ public class salepage extends javax.swing.JFrame {
         }
         catch(Exception e){
             txt1.setText(null);
+            String col[] = {"Pro ID", "Name", "Price", "Type"};
+            model = new DefaultTableModel(col, 0);
+            table.setModel(model);
+            row=0;
             e.printStackTrace();
         }
     }//GEN-LAST:event_baddActionPerformed
